@@ -10,6 +10,7 @@ import com.so.soregistry.service.RegistryService;
 import lombok.extern.slf4j.Slf4j;
 
 /**
+ * health checker
  * @author someecho <linghan.ma@gmail.com>
  * Created on 2024-04-19
  */

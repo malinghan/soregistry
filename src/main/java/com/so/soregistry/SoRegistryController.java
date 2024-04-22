@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.so.soregistry.cluster.Cluster;
+import com.so.soregistry.cluster.Server;
 import com.so.soregistry.model.InstanceMeta;
 import com.so.soregistry.service.RegistryService;
 
@@ -24,6 +26,9 @@ public class SoRegistryController {
 
     @Autowired
     RegistryService registryService;
+
+    @Autowired
+    Cluster cluster;
 
     @RequestMapping("/reg")
     public InstanceMeta register(@RequestParam String service, @RequestBody InstanceMeta instance)
@@ -65,5 +70,46 @@ public class SoRegistryController {
     {
         log.info(" ===> versions {}", services);
         return registryService.versions(services.split(","));
+    }
+
+    /**
+     * 获取本实例集群信息，用于探活
+     * @return
+     */
+    @RequestMapping("/info")
+    public Server info()
+    {
+        log.info(" ===> self info: {}", cluster.self());
+        return cluster.self();
+    }
+
+    /**
+     * 获取所有实例信息(集群信息)
+     * @return
+     */
+    @RequestMapping("/cluster")
+    public List<Server> cluster()
+    {
+        log.info(" ===> cluster: {}", cluster.getServers());
+        return cluster.getServers();
+    }
+
+    /**
+     * 获取leader信息
+     * @return
+     */
+    @RequestMapping("/leader")
+    public Server leader()
+    {
+        log.info(" ===> leader: {}", cluster.leader());
+        return cluster.leader();
+    }
+
+    @RequestMapping("/setSelfLeader")
+    public Server setSelfLeader()
+    {
+        cluster.self().setLeader(true);
+        log.info(" ===> setSelfLeader: {}", cluster.self());
+        return cluster.self();
     }
 }
