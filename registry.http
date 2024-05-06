@@ -8,7 +8,7 @@ Content-Type: application/json
 {
   "context": "sorpc",
   "host": "127.0.0.1",
-  "port": 8082,
+  "port": 8084,
   "scheme": "http",
   "status": false,
   "parameters": {
@@ -25,7 +25,7 @@ Content-Type: application/json
 {
   "context": "sorpc",
   "host": "127.0.0.1",
-  "port": 8081,
+  "port": 8082,
   "scheme": "http"
 }
 
@@ -46,14 +46,20 @@ POST http://localhost:8484/version?service=com.so.sorpc.demo.api.UserService
 ### 获取服务的版本列表
 POST http://localhost:8484/versions?services=com.so.sorpc.demo.api.UserService
 
-### 获取服务信息
+### 获取服务信息 myself
 GET http://localhost:8484/info
 
 ### 获取leader信息
 GET http://localhost:8484/leader
 
 ### 查看所有的服务信息
-GET http://localhost:8484/cluster
+GET http://localhost:8485/cluster
 
 ### 设置一个server为leader
-GET http://localhost:8486/setSelfLeader
+GET http://localhost:8484/setSelfLeader
+
+### 获取该server的snapshot
+GET http://localhost:8486/snapshot
+
+### get all instances
+GET http://localhost:8484/findAll?service=com.so.sorpc.demo.api.OrderService

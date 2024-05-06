@@ -1,6 +1,7 @@
 package com.so.soregistry.service;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,6 +11,7 @@ import java.util.stream.Collectors;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
+import com.so.soregistry.cluster.Snapshot;
 import com.so.soregistry.model.InstanceMeta;
 
 import lombok.extern.slf4j.Slf4j;
@@ -25,7 +27,7 @@ public class SoRegistryService implements RegistryService {
     private final static MultiValueMap<String, InstanceMeta> REGISTRY = new LinkedMultiValueMap<>(); //存储服务实例
     private final static Map<String, Long> VERSIONS = new ConcurrentHashMap<>(); //存储服务最新版本号
     private final static Map<String, Long>  TIMESTAMPS = new ConcurrentHashMap<>(); //store service timestamps
-    private final static AtomicLong VERSION = new AtomicLong(0); //版本号生成器
+    public final static AtomicLong VERSION = new AtomicLong(0); //版本号生成器
 
     public Map<String, Long> getTimestamps() {
         return TIMESTAMPS;
@@ -87,5 +89,31 @@ public class SoRegistryService implements RegistryService {
     public Map<String, Long> versions(String... services) {
         return  Arrays.stream(services)
                 .collect(Collectors.toMap(x->x, VERSIONS::get, (a, b)->b));
+    }
+
+    /**
+     * get current server info snapshot
+     * @return
+     */
+    public static synchronized Snapshot snapshot() {
+        LinkedMultiValueMap<String, InstanceMeta> registry = new LinkedMultiValueMap<>();
+        registry.addAll(REGISTRY);
+        Map<String, Long> versions = new HashMap<>(VERSIONS);
+        Map<String, Long> timestamps = new HashMap<>(TIMESTAMPS);
+        return new Snapshot(registry, versions, timestamps, VERSION.get());
+    }
+
+    //TODO 因为其为静态方法，可将其提取成工具类方法
+    public static synchronized long restore(Snapshot snapshot) {
+        REGISTRY.clear();
+        VERSIONS.clear();
+        TIMESTAMPS.clear();
+
+        REGISTRY.addAll(snapshot.getREGISTRY());
+        VERSIONS.putAll(snapshot.getVERSIONS());
+        TIMESTAMPS.putAll(snapshot.getTIMESTAMPS());
+        VERSION.set(snapshot.getVersion());
+
+        return snapshot.getVersion();
     }
 }

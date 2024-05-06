@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.so.soregistry.cluster.Cluster;
 import com.so.soregistry.cluster.Server;
+import com.so.soregistry.cluster.Snapshot;
 import com.so.soregistry.model.InstanceMeta;
 import com.so.soregistry.service.RegistryService;
+import com.so.soregistry.service.SoRegistryService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -34,13 +36,23 @@ public class SoRegistryController {
     public InstanceMeta register(@RequestParam String service, @RequestBody InstanceMeta instance)
     {
         log.info(" ===> register {} @ {}", service, instance);
+        //only leader allow option
+        checkLeader();
         return registryService.register(service, instance);
+    }
+
+    private void checkLeader() {
+        if(!cluster.self().isLeader()) {
+            throw new RuntimeException("current server is not a leader, the leader is " + cluster.leader().getUrl());
+        }
     }
 
     @RequestMapping("/unreg")
     public InstanceMeta unregister(@RequestParam String service, @RequestBody InstanceMeta instance)
     {
         log.info(" ===> unregister {} @ {}", service, instance);
+        //only leader allow option
+        checkLeader();
         return registryService.unregister(service, instance);
     }
 
@@ -55,6 +67,8 @@ public class SoRegistryController {
     public long renew(@RequestParam String service, @RequestBody InstanceMeta instance)
     {
         log.info(" ===> renew {} @ {}", service, instance);
+        //only leader allow option
+        checkLeader();
         return registryService.renew(instance, service);
     }
 
@@ -62,6 +76,8 @@ public class SoRegistryController {
     public long version(@RequestParam String service)
     {
         log.info(" ===> version {}", service);
+        //only leader allow option
+        checkLeader();
         return registryService.version(service);
     }
 
@@ -111,5 +127,10 @@ public class SoRegistryController {
         cluster.self().setLeader(true);
         log.info(" ===> setSelfLeader: {}", cluster.self());
         return cluster.self();
+    }
+
+    @RequestMapping("/snapshot")
+    public Snapshot snapshot() {
+        return SoRegistryService.snapshot();
     }
 }
