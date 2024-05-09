@@ -5,30 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8d5c4b-a2f0-4aec-a966-acce8cd7793b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/ExceptionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/SoExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/Election.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/ServerHealth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/Snapshot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192329.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192336.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192348.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192438.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192442.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192452.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192513.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192517.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192521.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192524.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192532.400.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192549.400.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-04-19T192638.200.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registry.http" beforeDir="false" afterPath="$PROJECT_DIR$/registry.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/so/soregistry/RegistryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/RegistryConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/so/soregistry/SoRegistryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/SoRegistryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/Cluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/so/soregistry/service/SoRegistryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/service/SoRegistryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/Election.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/ServerHealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/ServerHealth.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +79,8 @@
     "HTTP Request.registry | 查看所有的服务信息.executor": "Run",
     "HTTP Request.registry | 注册一个实例.executor": "Run",
     "HTTP Request.registry | 获取leader信息.executor": "Run",
+    "HTTP Request.registry | 获取所有服务实例#1.executor": "Run",
+    "HTTP Request.registry | 获取所有服务实例#2.executor": "Run",
     "HTTP Request.registry | 获取所有服务实例.executor": "Run",
     "HTTP Request.registry | 获取服务信息 myself.executor": "Run",
     "HTTP Request.registry | 获取服务信息.executor": "Run",
@@ -111,7 +96,7 @@
     "Spring Boot.SoregistryApplication:8484.executor": "Run",
     "Spring Boot.SoregistryApplication:8485.executor": "Debug",
     "Spring Boot.SoregistryApplication:8486.executor": "Run",
-    "git-widget-placeholder": "v3.0",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/malinghan/IdeaProjects/github/soregistry/src/main/java/http",
     "node.js.detected.package.eslint": "true",
@@ -143,12 +128,6 @@
     <configuration name="registry | 获取服务信息 myself" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="7" requestIdentifier="获取服务信息 myself" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="registry | 获取服务的版本" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="5" requestIdentifier="获取服务的版本" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="registry | 获取服务的版本列表" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="6" requestIdentifier="获取服务的版本列表" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="registry | 获取服务信息" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="7" requestIdentifier="获取服务信息" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -161,13 +140,22 @@
     <configuration name="registry | 取消注册一个实例" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="3" requestIdentifier="取消注册一个实例" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="registry | 查看所有的服务信息" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="9" requestIdentifier="查看所有的服务信息" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="registry | 获取服务的版本" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="5" requestIdentifier="获取服务的版本" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="registry | 获取所有服务实例#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" requestIdentifier="获取所有服务实例#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="registry | 获取所有服务实例#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="2" requestIdentifier="获取所有服务实例#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="registry | get all instances" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="12" requestIdentifier="get all instances" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="registry | 设置一个server为leader" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="10" requestIdentifier="设置一个server为leader" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="registry | 查看所有的服务信息" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/registry.http" index="9" requestIdentifier="查看所有的服务信息" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="SoregistryApplication:8484" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
@@ -200,10 +188,10 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.registry | 获取所有服务实例#1" />
+      <item itemvalue="HTTP Request.registry | 获取所有服务实例#2" />
       <item itemvalue="HTTP Request.registry | get all instances" />
-      <item itemvalue="HTTP Request.registry | 查看所有的服务信息" />
       <item itemvalue="HTTP Request.registry | 获取服务信息 myself" />
-      <item itemvalue="HTTP Request.registry | 获取服务的版本" />
       <item itemvalue="HTTP Request.registry | 设置一个server为leader" />
       <item itemvalue="Spring Boot.SoregistryApplication:8484" />
       <item itemvalue="Spring Boot.SoregistryApplication:8485" />
@@ -211,9 +199,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.registry | 查看所有的服务信息" />
+        <item itemvalue="HTTP Request.registry | 获取所有服务实例#2" />
+        <item itemvalue="HTTP Request.registry | 获取所有服务实例#1" />
         <item itemvalue="HTTP Request.registry | 设置一个server为leader" />
-        <item itemvalue="HTTP Request.registry | 获取服务的版本" />
         <item itemvalue="HTTP Request.registry | 获取服务信息 myself" />
         <item itemvalue="HTTP Request.registry | get all instances" />
       </list>
@@ -222,8 +210,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -243,21 +231,12 @@
       <workItem from="1713957538849" duration="9012000" />
       <workItem from="1714091081352" duration="2471000" />
       <workItem from="1714980130277" duration="13782000" />
+      <workItem from="1715050198666" duration="90000" />
+      <workItem from="1715224750106" duration="8960000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/so/soregistry/cluster/Election.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

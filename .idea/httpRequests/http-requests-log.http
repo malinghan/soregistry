@@ -1,3 +1,111 @@
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175614.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175514.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175510.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175507.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175502.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175430.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175225.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175219.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175149.200.json
+
+###
+
+GET http://localhost:8484/findAll?service=soapp1_public_dev_com.so.sorpc.demo.api.UserService
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-05-09T175043.200.json
+
+###
+
 GET http://localhost:8486/snapshot
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
 Accept-Encoding: br, deflate, gzip, x-gzip
@@ -440,114 +548,6 @@ Accept: */*
 content-length: 0
 
 <> 2024-05-06T202920.200.json
-
-###
-
-GET http://localhost:8485/cluster
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T202914.200.json
-
-###
-
-GET http://localhost:8485/cluster
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T202859.200.json
-
-###
-
-GET http://localhost:8484/cluster
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T202837.200.json
-
-###
-
-GET http://localhost:8484/cluster
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T202804.200.json
-
-###
-
-GET http://localhost:8484/cluster
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T193214.200.json
-
-###
-
-GET http://localhost:8484/cluster
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T193159.200.json
-
-###
-
-POST http://localhost:8484/version?service=com.so.sorpc.demo.api.UserService
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T193154.200.json
-
-###
-
-GET http://localhost:8484/info
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T193147.200.json
-
-###
-
-GET http://localhost:8484/findAll?service=com.so.sorpc.demo.api.OrderService
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-###
-
-GET http://localhost:8484/cluster
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T193124.200.json
-
-###
-
-GET http://localhost:8484/leader
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.1
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-content-length: 0
-
-<> 2024-05-06T193119.200.json
 
 ###
 

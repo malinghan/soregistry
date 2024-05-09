@@ -78,7 +78,7 @@ public class ServerHealth {
      * 3. if not alive -> status: false
      */
     private void updateServers() {
-        log.info("updateServers start========");
+        log.debug("updateServers start========");
         //self??
         List<Server> servers = cluster.getServers();
         //parallel
@@ -103,7 +103,7 @@ public class ServerHealth {
                 server.setLeader(false);
             }
         });
-        log.info("updateServers end========");
+        log.debug("updateServers end========");
     }
 
 

@@ -72,6 +72,14 @@ public class SoRegistryController {
         return registryService.renew(instance, service);
     }
 
+    @RequestMapping("/renews")
+    public long renews(@RequestParam String services, @RequestBody InstanceMeta instance)
+    {
+        log.info(" ===> renews {} @ {}", services, instance);
+        checkLeader();
+        return registryService.renew(instance, services.split(","));
+    }
+
     @RequestMapping("/version")
     public long version(@RequestParam String service)
     {

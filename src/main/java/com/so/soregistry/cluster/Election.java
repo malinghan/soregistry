@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 public class Election {
 
     public void electLeader(List<Server> servers) {
-        log.info("electLeader start========");
+        log.debug("electLeader start========");
         //filter leaders
         List<Server> leaders = servers.stream().filter(Server::isStatus)
                 .filter(Server::isLeader).toList();
@@ -25,7 +25,7 @@ public class Election {
         } else {
             log.debug(" ===>>> no need election for leader: {}", leaders.get(0));
         }
-        log.info("electLeader end========");
+        log.debug("electLeader end========");
     }
 
     /**

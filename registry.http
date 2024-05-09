@@ -1,6 +1,8 @@
 ### 获取所有服务实例
 GET http://localhost:8484/findAll?service=com.so.sorpc.demo.api.UserService
 
+### 获取所有服务实例
+GET http://localhost:8484/findAll?service= soapp1_public_dev_com.so.sorpc.demo.api.UserService
 ### 注册一个实例
 POST http://localhost:8484/reg?service=com.so.sorpc.demo.api.UserService
 Content-Type: application/json

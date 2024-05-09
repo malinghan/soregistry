@@ -21,10 +21,10 @@ public class RegistryConfig {
         return new SoRegistryService();
     }
 
-//        @Bean(initMethod = "start", destroyMethod = "stop")
-//        public HealthChecker healthChecker(@Autowired RegistryService registryService) {
-//            return new SoHealthChecker(registryService);
-//        }
+        @Bean(initMethod = "start", destroyMethod = "stop")
+        public HealthChecker healthChecker(@Autowired RegistryService registryService) {
+            return new SoHealthChecker(registryService);
+        }
 
     @Bean(initMethod = "init")
     public Cluster cluster(@Autowired SoRegistryConfigProperties registryConfigProperties) {
